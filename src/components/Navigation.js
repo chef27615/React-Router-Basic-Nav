@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Route, Link} from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import Contact from './Contact';
+import { BrowserRouter as Link} from 'react-router-dom';
+
+
+
 
 const Navigation = () => {
   return (
@@ -10,16 +10,14 @@ const Navigation = () => {
       <div className="App">
         <h1>React Router Mini</h1>
         <div>
-        <Route exact path="/" componet={Home} />
-        <Route exact path="/about" componet={About} />
-        <Route exact path="/Contact" componet={Contact} />
+          <Link to="/">Home</Link>
         </div>
-        <nav>
-          <Link to='/'>Home</Link>
-          <Link to='/about'>About</Link>
-          <Link to='/contact'>Contact</Link>
-        </nav>
-          
+        <div>
+          <Link to="/about">About</Link>
+        </div>
+        <div>
+          <Link to="/contact">Contact</Link>
+        </div>
       </div>
     </div>
   );
